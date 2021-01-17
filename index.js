@@ -10,7 +10,7 @@ function playSound(e) {
     audio.play();
     key.classList.add('playing');
 }
-d
+
 function removeTransition(e) {
     if(e.propertyName !== 'transform') {
         return; // skip it if it's not a transform
