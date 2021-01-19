@@ -1,0 +1,38 @@
+/* CSS VARIABLES */
+/* declare your variables on some sort of element */
+/* in our case we want to declare our variables at the highest level, :root*/
+/* use --variable: value; syntax to define your CSS variable */
+:root {
+    --base: #8f7327;
+    --spacing: 10px;
+    --blur: 10px;
+}
+
+/* when you use a variable in CSS, use property: var(--spacing); */
+img {
+    padding: var(--spacing);
+    background: var(--base);
+    filter: blur(var(--blur));
+}
+
+.hl {
+    color: var(--base);
+}
+
+/* misc styles that don't have anything to do with variables */
+body {
+    text-align: center;
+    background: #e2cf99;
+    color: #534d3b;
+    font-family: 'helvetica neue', sans-serif;
+    font-weight: 100;
+    font-size: 50px;
+}
+
+.controls {
+    margin-bottom: 50px;
+}
+
+input {
+    width: 100px;
+}

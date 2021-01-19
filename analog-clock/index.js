@@ -1,5 +1,5 @@
 function getHours0to11(dateObject) {
-    let hours0to23 = dateObject.getHours();
+    const hours0to23 = dateObject.getHours();
     if (hours0to23 > 11) {
         return hours0to23 - 12;
     }
@@ -7,7 +7,7 @@ function getHours0to11(dateObject) {
 }
 
 function rotate(hand, numerator, denominator) {
-    let degrees = (numerator / denominator) * 360;
+    const degrees = (numerator / denominator) * 360;
     hand.style.transform = `rotate(${degrees}deg)`;
     if (numerator === denominator - 1) { // if it's the last increment before we go back to 0deg, we need to do a little trick
         setTimeout(() => {hand.classList.remove('transition-enable')}, 100); // temporarily disable the tick animation
@@ -17,11 +17,13 @@ function rotate(hand, numerator, denominator) {
 }
 
 setInterval(function() {
-    let time = new Date();
+    const time = new Date();
     rotate(document.querySelector('.hour-hand'), getHours0to11(time), 12);
     rotate(document.querySelector('.minute-hand'), time.getMinutes(), 60);
     rotate(document.querySelector('.second-hand'), time.getSeconds(), 60);
 }, 1000);
+
+// MINUTE SWITCH TEST CODE
 
 // setInterval(function() {
 //     rotate(document.querySelector('.second-hand'), 58, 60);

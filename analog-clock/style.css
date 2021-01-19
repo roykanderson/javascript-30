@@ -37,13 +37,13 @@ body {
 
 .hour-hand {
     /* dimensions */
-    height: 27%;
-    top: 23%;
+    height: 20%;
+    top: 30%;
 }
 
 .minute-hand {
-    height: 35%;
-    top: 15%;
+    height: 30%;
+    top: 20%;
 }
 
 .second-hand {
